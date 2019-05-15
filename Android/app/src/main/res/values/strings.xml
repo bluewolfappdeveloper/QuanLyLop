@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Quản Lý Lớp</string>
+    <string name="tendangnhap">Tên Đăng Nhập</string>
+    <string name="matkhau">Mật Khẩu</string>
+    <string name="dangnhap">Đăng Nhập</string>
+    <string name="thoat">Thoát</string>
+    <string name="ketqua">Kết quả</string>
+
+    <!--Menu-->
+    <string name="home">Trang Chủ</string>
+    <string name="lophoc">Lớp học</string>
+    <string name="hocsinh">Học Sinh</string>
+    <string name="khoanphi">Khoản phí</string>
+    <string name="nophocphi">Nộp học phí</string>
+    <string name="thongke">Thống kê</string>
+    <string name="taikhoan">Tài khoản</string>
+    <string name="aboutus">About Us</string>
+
+    <string name="open">mở</string>
+    <string name="close">đóng</string>
+
+    <!--Menu item-->
+    <string name="themhocsinh">Thêm học sinh</string>
+
+    <string name="hovatenhocsinh">Họ và tên học sinh</string>
+
+    <string name="tenhocsinh">Tên học sinh</string>
+
+    <string name="huy">Hủy</string>
+
+    <string name="capnhatthongtin">Cập nhật thông tin</string>
+
+    <string name="capnhat">Cập nhật</string>
+
+    <string name="themlop">Thêm lớp học</string>
+
+    <string name="tenlop">Tên lớp</string>
+
+    <string name="hocphi">Học phí</string>
+
+    <string name="tenhocphi">Tên học phí</string>
+    <string name="themhocphi">Thêm học phí</string>
+    <string name="themphi">Thêm phí</string>
+    <string name="tenphi">Tên phí</string>
+
+    <string name="search">Tìm kiếm</string>
+
+    <string name="dadong">Đã Đóng: </string>
+    <string name="chuadong">Chưa Đóng: </string>
+    <string name="dadong1">Đã Đóng </string>
+    <string name="chuadong1">Chưa Đóng </string>
+    <string name="tentaikhoan">Tên tài khoản</string>
+
+
+</resources>

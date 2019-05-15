@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="QuanLyLopPC.UC.AboutUs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="500" Height="282.609"
+             
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="Roboto">
+    <materialDesign:Card>
+        <Grid Background="#FFFFD669" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+
+                <Label Content="PHẦN MỀM QUẢN LÝ LỚP" Margin="10" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="UTM Caviar" FontSize="30" Background="GreenYellow" Foreground="Brown" FontWeight="Bold"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="10 0 10 10"></Setter>
+                        <Setter Property="Foreground" Value="Blue"></Setter>
+                        <Setter Property="FontSize" Value="25"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Tên phần mềm: Quản Lý Lớp " VerticalAlignment="Top"  FontWeight="Bold" Margin="10,0,0,10" Width="340"  />
+                <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Version: 3.0 " VerticalAlignment="Top" FontWeight="Bold"  />
+                <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Copyright: Võ Nhật Tân" VerticalAlignment="Top"  FontWeight="Bold"  />
+                <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Release: 2019" VerticalAlignment="Top"  FontWeight="Bold" />
+                <!--<GroupBox Header="Decription" HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="200" Foreground="#FFD31361">
+                <GroupBox.Style>
+                    <Style>
+                       
+                    </Style>
+                </GroupBox.Style>
+            </GroupBox>-->
+                <!--<Button Content="Quay Lại" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>-->
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Image HorizontalAlignment="Left" Height="130" VerticalAlignment="Center"  Source="classroom.png"/>
+            </Grid>
+
+        </Grid>
+    </materialDesign:Card>
+    
+    
+</UserControl>

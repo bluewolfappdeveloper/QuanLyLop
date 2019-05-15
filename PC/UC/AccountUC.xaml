@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="QuanLyLopPC.UC.AccountUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyLopPC.UC"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="20"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="{DynamicResource MaterialDesignFont}"
+            Loaded="Window_Loaded" >
+    <Grid>
+
+        <materialDesign:Card Width="400" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+
+                    <TextBox x:Name="NameUser"
+                             Margin="10"
+                             IsReadOnly="True"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"  TextChanged="NameUser_TextChanged"  >
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Linux" />
+                                <TextBlock Margin="10 0 0 0" > Tên Admin</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+
+                    </TextBox>
+
+                    <TextBox Margin="10"
+                             x:Name="UserName"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Library" />
+                                <TextBlock Margin="10 0 0 0"> Tên đăng nhập</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+
+                    <PasswordBox x:Name="PasswordOld"
+                             Margin="10"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                             PasswordChanged="PasswordOld_PasswordChanged">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Coin" />
+                                <TextBlock Margin="10 0 0 0">Mật khẩu</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </PasswordBox>
+
+                    <PasswordBox x:Name="PasswordNew"
+                             Margin="10"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                             PasswordChanged="PasswordNew_PasswordChanged">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="LockReset" />
+                                <TextBlock Margin="10 0 0 0"> Mật khẩu mới</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </PasswordBox>
+
+                    <PasswordBox x:Name="RePassword"
+                             Margin="10"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                             PasswordChanged="RePassword_PasswordChanged">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="LockReset" />
+                                <TextBlock Margin="10 0 0 0">Nhập lại mật khẩu mới</TextBlock>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </PasswordBox>
+
+
+                </StackPanel>
+
+                <Grid Grid.Row="1" Height="52" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Button Width="100"
+                        Margin="10"
+                        ToolTip="SỬA"
+                        Content="Cập nhật"
+                        Grid.Column="3"
+                        Background="Orange"
+                        BorderBrush="Orange"
+                            FontSize="15"
+                        x:Name="btnupdate" Click="btnupdate_Click"/>
+                </Grid>
+            </Grid>
+
+        </materialDesign:Card>
+
+    </Grid>
+</UserControl>

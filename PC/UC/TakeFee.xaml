@@ -1,0 +1,229 @@
+﻿<UserControl x:Class="QuanLyLopPC.UC.TakeFee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyLopPC.UC"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="Roboto"
+             Height="550" Width="1000">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="GroupBox">
+                <Setter Property="Margin" Value="10"></Setter>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            
+
+               
+
+                <GroupBox Header="Danh Sách học sinh" Margin="10" >
+                    <Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0" VerticalAlignment="Center">
+                                <ComboBox materialDesign:HintAssist.Hint="Tên lớp"
+                                          IsEditable="True"
+                                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                          Grid.Column="1"
+                                          Grid.Row="0"
+                                          x:Name="cbclass"
+                                          Margin="15" FontSize="15" SelectionChanged="cbclass_SelectionChanged" >   
+                                </ComboBox>
+
+                                
+
+                            </StackPanel>
+                            <Grid Grid.Row="0" VerticalAlignment="Center" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+
+                            </Grid>
+
+                            <Grid Grid.Row="3" Width="auto" Height="auto">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+
+                                    
+                               
+    
+                                </Grid.ColumnDefinitions>
+                                <ComboBox materialDesign:HintAssist.Hint="Search"
+                                          MaxDropDownHeight="120"
+                                          IsEditable="True"
+                                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                          Grid.ColumnSpan="1"
+                                          Grid.Column="1"
+                                          x:Name="cbfinding"
+                                          PreviewKeyDown="cbfinding_PreviewKeyDown"
+                                           Text="{Binding SearchText}"
+                                          Margin="10" SelectionChanged="cbfinding_SelectionChanged"  >
+                                </ComboBox>
+                            </Grid>
+
+                            <Grid Grid.Row="4">
+                             
+   
+    
+                                <ListView x:Name="lvstudent"  
+                                          Height="auto" 
+                                          Margin="10" 
+                                          SelectionChanged="lvstudent_SelectionChanged" 
+                                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                          ScrollViewer.CanContentScroll="False" >
+                                    <ListView.View>
+                                        <GridView >
+                                            <GridViewColumn Width="auto" DisplayMemberBinding="{Binding STT}" ></GridViewColumn>
+                                            <GridViewColumn Header="Tên Học Sinh" Width="auto" DisplayMemberBinding="{Binding NameStudent}"></GridViewColumn>
+                                            
+                                            <GridViewColumn Header="Số điện thoại" Width="auto" DisplayMemberBinding="{Binding Phone}"></GridViewColumn>
+
+                                            <GridViewColumn Header="Đã đóng" Width="auto" DisplayMemberBinding="{Binding havefee}"></GridViewColumn>
+                                            <GridViewColumn Header="Chưa đóng" Width="auto" DisplayMemberBinding="{Binding nohave }"></GridViewColumn>
+                                        
+                                    </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            
+
+                            </Grid>
+
+                            
+                        </Grid>
+                    </Grid>
+                    
+                </GroupBox>
+            
+
+        </Grid>
+
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <Grid>
+                <GroupBox Header="Thu phí" Margin="5 10 0 0">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="txtNameStudent" materialDesign:HintAssist.Hint="Tên học sinh" FontSize="16"  MinWidth="250" Width="auto" Margin="10" IsEnabled="False" Text="{Binding SelectedItem.NameStudent, ElementName=lvstudent, Mode=OneWay}"/>
+                            <TextBox  x:Name="txtClass" materialDesign:HintAssist.Hint="Lớp học" FontSize="16"  MinWidth="150" Width="auto" Margin="10" IsEnabled="False" Text="{Binding Path=Text, ElementName=cbclass, Mode=OneWay}"></TextBox>
+                        </StackPanel>
+                        <ComboBox materialDesign:HintAssist.Hint="Khoản thu"
+                                  IsEditable="True"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                  Grid.Column="1"
+                                  Grid.Row="0"
+                                  x:Name="cbfee"
+                                  Margin="10" FontSize="16"  >  
+                        </ComboBox>
+                        <DatePicker x:Name="getdatetake" materialDesign:HintAssist.Hint="Ngày nộp" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="10" />
+                       
+                    </StackPanel>
+                </GroupBox> 
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        Width="100"
+                        Margin="8"
+                        ToolTip="THÊM"
+                        Content="THÊM"
+                        Grid.Column="1"
+                        x:Name="btnadd" Click="btnadd_Click" >
+                </Button>
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        Width="100"
+                        Margin="8"
+                        ToolTip="XÓA"
+                        Content="XÓA"
+                        Grid.Column="2" 
+                        x:Name="btndelete" Click="btndelete_Click"/>
+
+                <Button Width="100"
+                        Margin="8"
+                        ToolTip="SỬA"
+                        Content="SỬA"
+                        Grid.Column="3"
+                        Background="Orange" 
+                        x:Name="btnupdate" Click="btnupdate_Click"/>
+            </Grid>
+                
+
+            
+            <Grid Grid.Row="2">
+                <GroupBox Header="Thu phí" Margin="5">
+                    <Grid Grid.Row="4">
+                    <ListView x:Name="lvfee"   Height="250" Margin="5" SelectionChanged="lvfee_SelectionChanged" >
+                        <ListView.View>
+                            <GridView >
+                                <GridViewColumn Width="auto" DisplayMemberBinding="{Binding STT}" ></GridViewColumn>
+                                <GridViewColumn Header="Tên phí"  Width="auto" DisplayMemberBinding="{Binding NameFee}"></GridViewColumn>
+                                <GridViewColumn Header="Học Phí" Width="auto">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextAlignment="Center" 
+                                                   Text="{Binding Path=PriceFee, StringFormat={}{0:#,#}  }"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                    <GridViewColumn Header="Ngày đóng"  Width="auto" DisplayMemberBinding="{Binding datetime}"></GridViewColumn>
+                                </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+                </GroupBox>
+                
+
+            </Grid>
+        </Grid>
+        
+    </Grid>
+
+
+
+</UserControl>

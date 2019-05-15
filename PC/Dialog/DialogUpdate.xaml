@@ -1,0 +1,77 @@
+﻿<Window x:Class="QuanLyLopPC.Dialog.DialogUpdate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="Roboto"      
+        Title="DialogUpdate" Height="335" Width="500" WindowStartupLocation="CenterScreen" 
+        WindowState="Minimized" WindowStyle="None" >
+    <materialDesign:Card Margin="10 5 10 5">
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Header="CẬP NHẬT" 
+                      Margin="10" 
+                      Style="{DynamicResource MaterialDesignGroupBox}">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="txtNameStudent" materialDesign:HintAssist.Hint="Tên học sinh" FontSize="16"  MinWidth="250" Width="auto" Margin="10" IsEnabled="False" Text="{Binding SelectedItem.NameStudent, ElementName=lvstudent, Mode=OneWay}" TextChanged="txtNameStudent_TextChanged"/>
+                            <TextBox  x:Name="txtClass" materialDesign:HintAssist.Hint="Lớp học" FontSize="16"  MinWidth="150" Width="auto" Margin="10" IsEnabled="False" Text="{Binding Path=Text, ElementName=cbclass, Mode=OneWay}"></TextBox>
+                        </StackPanel>
+                        <ComboBox materialDesign:HintAssist.Hint="Khoản thu"
+                                  IsEditable="True"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                  Grid.Column="1"
+                                  Grid.Row="0"
+                                  x:Name="cbfee"
+                                  Margin="10" FontSize="16"  >
+                        </ComboBox>
+                        <DatePicker x:Name="getdatetake" materialDesign:HintAssist.Hint="Ngày nộp" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="10" />
+
+                    </StackPanel>
+                </GroupBox>
+
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        Width="100"
+                            Height="30"
+                        Margin="5"
+                        ToolTip="SỬA"
+                        Content="SỬA"
+                        Grid.Column="2"
+                        Click="btnupdate_Click"
+                        x:Name="btnupdate"/>
+
+                    <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                            Width="100"
+                            Height="30"
+                            Margin="5"
+                            ToolTip="Thoát"
+                            Content="Thoát"
+                            Grid.Column="3"
+                            Click="btnExit_Click"
+                            x:Name="btnExit"/>
+                </Grid>
+            </Grid>
+            
+        </Grid>   
+    </materialDesign:Card>
+</Window>

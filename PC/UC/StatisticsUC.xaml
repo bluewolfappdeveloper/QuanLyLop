@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="QuanLyLopPC.UC.StatisticsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyLopPC.UC"
+             mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="Roboto"
+            Height="500" Width="500">
+
+    <materialDesign:Card>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center">
+ 
+                <ComboBox materialDesign:HintAssist.Hint="Tên lớp"
+                          IsEditable="True"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                          Grid.Column="0"
+                          Grid.Row="0"
+                          x:Name="cbclass"
+                          Margin="15" FontSize="15" SelectionChanged="cbclass_SelectionChanged" >
+                </ComboBox>
+
+                <ComboBox materialDesign:HintAssist.Hint="Khoản thu"
+                                  IsEditable="True"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                  Grid.Column="1"
+                                  Grid.Row="0"
+                                  x:Name="cbfee"
+                                  Margin="10" FontSize="16" SelectionChanged="cbfee_SelectionChanged"  >
+                </ComboBox>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                 
+                <RadioButton x:Name="rdoTake" IsChecked="True" Margin="15" Content="Đã đóng" Checked="rdoTake_Checked"></RadioButton>
+                <RadioButton x:Name="rdoUnTake" Margin="15" Content="Chưa đóng" Checked="rdoUnTake_Checked"></RadioButton>
+                <!--<RadioButton x:Name="rdoAll" Margin="15" Content="Tất cả" Checked="rdoAll_Checked"></RadioButton>-->
+            </StackPanel>
+            
+            
+            <Grid Grid.Row="4">
+                <ListView x:Name="lvstudent"  Height="auto" Margin="10" SelectionChanged="lvstudent_SelectionChanged" >
+                    <ListView.View>
+                        <GridView >
+                            <GridViewColumn Width="auto" DisplayMemberBinding="{Binding STT}" ></GridViewColumn>
+                            <GridViewColumn Header="Tên Học Sinh" Width="auto" DisplayMemberBinding="{Binding namestudent}"></GridViewColumn>
+                            <GridViewColumn Header="Số điện thoại" Width="auto" DisplayMemberBinding="{Binding phonestudent}"></GridViewColumn>
+                            <GridViewColumn x:Name="columnNote" Header="Ngày đóng" Width="auto" DisplayMemberBinding="{Binding datetime}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+            </Grid>
+        </Grid>
+    </materialDesign:Card>
+
+</UserControl>

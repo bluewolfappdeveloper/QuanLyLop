@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item android:id="@+id/itaddstudent"
+          android:title="@string/themhocsinh"></item>
+    <item android:id="@+id/itaddclass"
+        android:title="@string/themlop"></item>
+    <item android:id="@+id/itaddfee"
+        android:title="@string/themhocphi"></item>
+
+
+</menu>

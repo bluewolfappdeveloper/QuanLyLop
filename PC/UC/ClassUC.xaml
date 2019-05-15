@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="QuanLyLopPC.UC.ClassUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="Roboto"
+            Height="445" Width="530"
+            >
+
+    <materialDesign:Card>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" VerticalAlignment="Center">
+                <TextBox x:Name="txtName" materialDesign:HintAssist.Hint="Tên Lớp" FontSize="16" Margin="15" MinWidth="250" Width="auto" Text="{Binding Path=SelectedItem.NameClass, ElementName=lvclass,Mode=OneWay}" DockPanel.Dock="Left" />
+                <TextBox x:Name="txtFee" materialDesign:HintAssist.Hint="Học phí"  
+                         FontSize="16"
+                         Margin="15" MinWidth="100" Width="auto" 
+                         Text="{Binding SelectedItem.FeeClass, ElementName=lvclass, Mode=OneWay, StringFormat={}{0:#,0.0} }"
+                         DockPanel.Dock="Right" />
+            </DockPanel>
+            <StackPanel  Orientation="Vertical" >
+                
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        Width="100"
+                        Margin="10"
+                        ToolTip="THÊM"
+                        Content="THÊM"
+                        Grid.Column="1"
+                        x:Name="btnadd" Click="btnadd_Click">
+                </Button>
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        Width="100"
+                        Margin="10"
+                        ToolTip="XÓA"
+                        Content="XÓA"
+                        Grid.Column="2" 
+                        x:Name="btndelete" Click="btndelete_Click"/>
+
+                <Button Width="100"
+                        Margin="10"
+                        ToolTip="SỬA"
+                        Content="SỬA"
+                        Grid.Column="3"
+                        Background="Orange" 
+                        x:Name="btnupdate" Click="btnupdate_Click"/>
+            </Grid>
+
+            <Grid Grid.Row="3" Width="auto" Height="auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                    <!--<ColumnDefinition></ColumnDefinition>-->
+                </Grid.ColumnDefinitions>
+                <ComboBox Text="{Binding SearchText}"
+                          materialDesign:HintAssist.Hint="Search"
+                          IsEditable="True"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                          Grid.ColumnSpan="1"
+                          Grid.Column="1"
+                          x:Name="cbfinding"
+                          MaxDropDownHeight="97"
+                          Margin="5" 
+                          SelectionChanged="cbfinding_SelectionChanged" 
+                          PreviewKeyDown="cbfinding_PreviewKeyDown">
+                </ComboBox>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <ListView x:Name="lvclass"  SelectionChanged="lvclass_SelectionChanged" Height="250" Margin="10" >
+                    <ListView.View>
+                        <GridView >
+                            
+                                <GridViewColumn Width="auto" DisplayMemberBinding="{Binding STT}" ></GridViewColumn>
+                            <GridViewColumn Header="Tên Lớp"  Width="auto" DisplayMemberBinding="{Binding NameClass}"></GridViewColumn>
+                            <GridViewColumn Header="Học Phí" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Center" 
+                                                   Text="{Binding Path=FormatFeeClass}"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Số lượng" Width="auto" DisplayMemberBinding="{Binding Count}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+        </Grid>
+    </materialDesign:Card>
+
+</UserControl>            
