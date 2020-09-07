@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Quản Lý Lớp</string>
-    <string name="tendangnhap">Tên Đăng Nhập</string>
-    <string name="matkhau">Mật Khẩu</string>
-    <string name="dangnhap">Đăng Nhập</string>
-    <string name="thoat">Thoát</string>
-    <string name="ketqua">Kết quả</string>
+    <string name="app_name">QuanLyLop</string>
+    <string name="quanlylop">QUẢN LÝ LỚP</string>
+    <string name="tendangnhap">Tên đăng nhập</string>
+    <string name="matkhau">Mật khẩu</string>
+    <string name="dangnhap">Đăng nhập</string>
 
     <!--Menu-->
     <string name="home">Trang Chủ</string>
@@ -13,43 +12,38 @@
     <string name="khoanphi">Khoản phí</string>
     <string name="nophocphi">Nộp học phí</string>
     <string name="thongke">Thống kê</string>
+    <string name="caidat">Cài đặt</string>
     <string name="taikhoan">Tài khoản</string>
     <string name="aboutus">About Us</string>
+    <string name="thoat">Thoát</string>
 
     <string name="open">mở</string>
     <string name="close">đóng</string>
 
-    <!--Menu item-->
-    <string name="themhocsinh">Thêm học sinh</string>
-
-    <string name="hovatenhocsinh">Họ và tên học sinh</string>
-
-    <string name="tenhocsinh">Tên học sinh</string>
-
-    <string name="huy">Hủy</string>
-
-    <string name="capnhatthongtin">Cập nhật thông tin</string>
-
+    <string name="hocphi">Học phí</string>
     <string name="capnhat">Cập nhật</string>
 
-    <string name="themlop">Thêm lớp học</string>
-
-    <string name="tenlop">Tên lớp</string>
-
-    <string name="hocphi">Học phí</string>
-
-    <string name="tenhocphi">Tên học phí</string>
-    <string name="themhocphi">Thêm học phí</string>
-    <string name="themphi">Thêm phí</string>
-    <string name="tenphi">Tên phí</string>
-
-    <string name="search">Tìm kiếm</string>
-
-    <string name="dadong">Đã Đóng: </string>
-    <string name="chuadong">Chưa Đóng: </string>
-    <string name="dadong1">Đã Đóng </string>
-    <string name="chuadong1">Chưa Đóng </string>
-    <string name="tentaikhoan">Tên tài khoản</string>
+    <!-- Lop hoc -->
+    <string name="themlop">Thêm Lớp Học</string>
+    <string name="capnhatlop">Cập nhật Lớp Học</string>
+    <string name="tenlop">Tên Lớp</string>
 
 
+    <!-- Hoc Phi -->
+    <string name="themphi">Thêm Học Phí</string>
+    <string name="capnhathocphi">Cập nhật Học Phí</string>
+    <string name="tenphi">Tên Học Phí</string>
+    <string name="hienthi">Hiển Thị</string>
+
+    <!-- Hoc Sinh -->
+    <string name="themhocsinh">Thêm Học Sinh</string>
+    <string name="capnhathocsinh">Cập nhật Học sinh</string>
+    <string name="tenhocsinh">Tên Học sinh</string>
+    <string name="sodienthoai">Số điện thoại </string>
+
+
+    <string name="capnhattaikhoan">Cập nhật tài khoản</string>
+    <string name="tenhienthi">Tên hiển thị</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

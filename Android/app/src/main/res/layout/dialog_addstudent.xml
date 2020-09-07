@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/themhocsinh"
+        android:textAlignment="center"
+        android:textColor="@color/colorOrangeLight"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/coiny">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblAddNameClassStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lớp 12"
+        android:textAlignment="center"
+        android:textSize="25sp"
+
+        android:textStyle="bold"
+        app:fontFamily="@font/coiny">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editAddNameStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tenhocsinh"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editAddPhoneStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:maxLength="11"
+        android:hint="@string/sodienthoai"
+        android:inputType="phone">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="12dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddStudent"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/themhocsinh"
+            android:textColor="#fff"
+            android:textStyle="bold">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnExitAddStudent"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/thoat"
+            android:textColor="#fff"
+            android:textStyle="bold">
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+</LinearLayout>

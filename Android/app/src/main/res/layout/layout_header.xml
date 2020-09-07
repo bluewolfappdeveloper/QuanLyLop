@@ -2,32 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size190dp"
-    android:gravity="bottom"
+    android:layout_height="140dp"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:background="@drawable/backgroundmenu">
+    android:gravity="bottom"
+    android:background="@drawable/layout_border_bottom">
 
-    <!--android:contentDescription="@string/nav_header_desc"-->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/size80dp"
-        android:layout_height="@dimen/size80dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/sizeOfPic"
+        android:layout_height="@dimen/sizeOfPic"
+        android:elevation="12dp"
+        app:cardCornerRadius="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_height="@dimen/sizeOfPic"
+            android:layout_width="match_parent"
+            android:id="@+id/imageView1"
+            android:src="@drawable/classroom"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
 
-        app:srcCompat="@drawable/boy" />
-
-    <TextView
-        android:id="@+id/txtnameuser"
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textFullName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:fontFamily="@font/coiny"
-        android:textSize="@dimen/size18sp"
-        android:textColor="@color/green" />
+        android:text="Nguyễn Hoàng Ngọc Đức"
+        android:textSize="25sp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeMaxTextSize="30sp"
+        app:autoSizeStepGranularity="2sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorBlackLight">
 
-
+    </androidx.appcompat.widget.AppCompatTextView>
 </LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/themphi"
+        app:fontFamily="@font/coiny"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOrangeLight"
+        android:textSize="30sp">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editAddNameFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tenphi"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editAddPriceFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:hint="@string/hocphi"
+        android:inputType="number">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/editAddShowFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="Hiển thị"
+        android:textSize="16sp"
+        android:checked="true">
+
+    </androidx.appcompat.widget.AppCompatCheckBox>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="12dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddFee"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/themphi"
+            android:textColor="#fff"
+            android:textStyle="bold">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnExitAddFee"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/thoat"
+            android:textColor="#fff"
+            android:textStyle="bold">
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+</LinearLayout>

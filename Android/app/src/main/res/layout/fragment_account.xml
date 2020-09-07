@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.AccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/coiny"
+                android:text="@string/capnhattaikhoan"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/colorOrangeLight"
+                android:letterSpacing="0.05"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/classroom" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editdisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_rounded"
+                android:drawableLeft="@drawable/ic_user_24"
+                android:hint="@string/tenhienthi"
+                android:lines="1"
+                android:padding="12dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:textColor="#111" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_rounded"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:hint="@string/tendangnhap"
+                android:lines="1"
+                android:padding="12dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:textColor="#111" />
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/edittext_rounded"
+                android:drawableLeft="@drawable/ic_key"
+                android:drawableRight="@drawable/ic_eye"
+                android:hint="@string/matkhau"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:padding="12dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpdateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/alfa_slab_one"
+                android:letterSpacing="0.05"
+                android:text="@string/capnhat"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

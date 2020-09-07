@@ -1,107 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundlogin"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.LoginActivity"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:gravity="center">
 
 
-
-
-    <LinearLayout
-        android:id="@+id/text"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:textAlignment="center">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/coiny"
-            android:text="@string/app_name"
+            android:text="@string/quanlylop"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_above="@+id/text"
-            android:textColor="@color/yellow"
-            android:textSize="45dp" />
+            android:textSize="36sp"
+            android:textColor="@color/colorOrangeLight"
+            android:letterSpacing="0.05"/>
 
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/classroom" />
 
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:textSize="@dimen/size20dp"
-                android:fontFamily="sans-serif"
-                android:hint="@string/tendangnhap"
-                android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:text="admin"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint"
-                android:background="@drawable/txt_rounded"
-                android:typeface="normal" />
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:textSize="@dimen/size20dp"
-                android:hint="@string/matkhau"
-                android:text="admin"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textColor="@color/input_login"
-                android:textColorHint="@color/input_login_hint"
-                android:background="@drawable/txt_rounded"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/edittext_rounded"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:hint="@string/tendangnhap"
+            android:lines="1"
+            android:padding="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:textColor="#111" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/edittext_rounded"
+            android:drawableLeft="@drawable/ic_key"
+            android:drawableRight="@drawable/ic_eye"
+            android:hint="@string/matkhau"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:padding="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp" />
 
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20pt"
-                    android:background="@drawable/btn_rounded"
-                    android:text="@string/dangnhap"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:onClick="btnLogin_OnClick"
-                    />
 
-                <Button
-                    android:id="@+id/btnExit"
-                    android:background="@drawable/btn_rounded"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/thoat"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:onClick="btnExit_OnClick"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_rounded"
+            android:fontFamily="@font/alfa_slab_one"
+            android:letterSpacing="0.05"
+            android:text="@string/dangnhap"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp">
 
-</RelativeLayout>
+        </androidx.appcompat.widget.AppCompatButton>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

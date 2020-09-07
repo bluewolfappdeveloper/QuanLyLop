@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgClass"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/pic_class"
+        android:layout_margin="12dp">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblNameClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello My friend"
+            android:letterSpacing="0.08"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="left">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblFeeClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello My friend"
+            android:textSize="14sp"
+            android:layout_gravity="left">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+    </LinearLayout>
+
+
+</LinearLayout>

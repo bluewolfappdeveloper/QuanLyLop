@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "76758973426",
+    "firebase_url": "https://quanlylop-8c2ff.firebaseio.com",
+    "project_id": "quanlylop-8c2ff",
+    "storage_bucket": "quanlylop-8c2ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76758973426:android:a1651c95b1b7561b20c96b",
+        "android_client_info": {
+          "package_name": "com.tiger.quanlylop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76758973426-rg6pi6usspifst88rgbpcbs6r5o6da3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiger.quanlylop",
+            "certificate_hash": "2f472e1040feaa2230f90dc0068f82a445d52ab8"
+          }
+        },
+        {
+          "client_id": "76758973426-9nb8hlfo6ah5bf9gt5e5pntgn8u8fta0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQkj2sEVKu9rWN2daE9YS2ibojC4GdXkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76758973426-9nb8hlfo6ah5bf9gt5e5pntgn8u8fta0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

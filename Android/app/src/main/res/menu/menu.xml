@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/home" android:title="@string/home" ></item>
-        <item android:id="@+id/class_" android:title="@string/lophoc"></item>
-        <item android:id="@+id/student" android:title="@string/hocsinh"></item>
-        <item android:id="@+id/fee" android:title="@string/khoanphi"></item>
-        <item android:id="@+id/statistics" android:title="@string/thongke"></item>
-        <!--<item android:id="@+id/userInfo" android:title="@string/taikhoan"></item> -->
-        <item android:id="@+id/exitmenu" android:title="@string/thoat"></item>
+        <item android:id="@+id/home" android:title="@string/home" android:icon="@drawable/ic_home"></item>
+        <item android:id="@+id/_class" android:title="@string/lophoc" android:icon="@drawable/ic_class"></item>
+        <item android:id="@+id/student" android:title="@string/hocsinh" android:icon="@drawable/ic_student"></item>
+        <item android:id="@+id/fee" android:title="@string/khoanphi" android:icon="@drawable/ic_fee"></item>
+        <item android:id="@+id/statistics" android:title="@string/thongke" android:icon="@drawable/ic_statistics"></item>
+        <item android:id="@+id/setting" android:title="@string/caidat" android:icon="@drawable/ic_settings"></item>
+        <item android:id="@+id/userInfo" android:title="@string/taikhoan" android:icon="@drawable/ic_user"></item>
+        <item android:id="@+id/exit" android:title="@string/thoat" android:icon="@drawable/ic_exit"></item>
     </group>
 </menu>
